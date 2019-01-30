@@ -12,11 +12,8 @@ project(DXTK12)
 						${CMAKE_CURRENT_SOURCE_DIR}/Src
 	)
 
-	##lets add specific windows build definitions
-	#if (WIN32)
-	add_compile_definitions( _WIN32_WINNT=0x0A00 _WIN7_PLATFORM_UPDATE _DEBUG _LIB _CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS
+	add_compile_definitions( _WIN32_WINNT=0x0A00 _WIN7_PLATFORM_UPDATE  _LIB _CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS
 )
-	#endif (WIN32)
 
 	#making sure to add the common cpp flags, that are defined in the main cpp file
     set(COMMON_CXX_FLAGS "${COMMON_CXX_FLAGS}  /std:c++17 /W4 /arch:AVX2 /fp:fast /MP")
